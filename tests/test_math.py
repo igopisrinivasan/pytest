@@ -42,6 +42,15 @@ def test_divide_by_zero():
 
 # --------------------------------------------------------------------------------
 # A parametrized test function
+
+# Multiplication test ideas
+
+# two positive integers
+# identity : multiplying any number by 1
+# Zero: multiplying any number by 0
+# positive by a negative
+# b\negative by a negative
+# multiply  floats
 # --------------------------------------------------------------------------------
 
 products = [
@@ -53,6 +62,20 @@ products = [
     (2.5, 6.7, 16.75)     # floats
 ]
 
+
+def test_mulitply_two_postive_ints():
+    assert 2*3 == 6
+
+
+def test_multiply_identity():
+    assert 1*99 == 99
+
+
+def test_multiply_zero():
+    assert 0*100 == 0
+
+
+# DRY Prinicple: Dont Repeat Yourself!
 
 @pytest.mark.parametrize('a, b, product', products)
 def test_multiplication(a, b, product):
